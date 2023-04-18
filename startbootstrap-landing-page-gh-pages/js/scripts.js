@@ -29,13 +29,16 @@ function nextPrev(n) {
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
-  // if you have reached the end of the form... :
+ if (currentTab == 4){
+    $("#idname").html($("#inputname").val())
+  }
+
   if (currentTab >= x.length) {
     //...the form gets submitted:
     document.getElementById("regForm").submit();
     return false;
   }
-  // Otherwise, display the correct tab:
+
   showTab(currentTab);
 }
 
@@ -70,3 +73,13 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+$( "#submitButton" ).on( "click", function () { 
+     console.log ("Datos guardados correctamente.") 
+});
+   
+$( "#clearButton" ).on( "click", function () { 
+    $("#name").val("")
+    $("#email").val("")
+    $("#Message").val("")
+});
