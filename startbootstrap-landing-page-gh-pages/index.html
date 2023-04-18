@@ -16,31 +16,20 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">GS Academy</a>
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
             </div>
         </nav>
-        <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
-                            <!-- Page heading-->
-                            <h1 class="mb-5">Suscribite para formar parte de la GrandSportif Academy!</h1>
-                            <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
+                            <h1 class="mb-5">Suscribite para formar parte de la GrandSportif Academy!</h1>                          
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
+                          
                                 <div class="row">
                                     <div class="col">
                                         <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
@@ -48,11 +37,7 @@
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                     </div>
                                     <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                                </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
+                                </div>                             
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
                                         <div class="fw-bolder">Form submission successful!</div>
@@ -60,10 +45,6 @@
                                         <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                     </div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             </form>
                         </div>
@@ -71,7 +52,7 @@
                 </div>
             </div>
         </header>
-        <!-- Icons Grid-->
+
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
@@ -99,7 +80,7 @@
                 </div>
             </div>
         </section>
-        <!-- Image Showcases-->
+
         <section class="showcase">
             <div class="container-fluid p-0">
                 <div class="row g-0">
@@ -125,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <!-- Testimonials-->
+
         <section class="testimonials text-center bg-light">
             <div class="container">
                 <h2 class="mb-5">Nuestro GrandSportif Team</h2>
@@ -154,52 +135,89 @@
                 </div>
             </div>
         </section>
-        <!-- Call to Action-->
+
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <h2 class="mb-4">Preparado para ser el mejor? Inscribite ahora!</h2>
-                        <!-- Signup form-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
+                       
+                        <form class="form-subscribe" id="contactFormFooter">
+
                             <div class="row">
                                 <div class="col">
                                     <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">Email Address is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">Email Address Email is not valid.</div>
                                 </div>
-                                <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                <div class="col">
+                                    <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                </div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
+
+                            <div class= "row">
+                                <textarea class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email"> </textarea>
+                            </div>
+
+                            <div class= "row">
+                                 <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                 <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="clearButton" type="submit">Clear</button></div>
+                            </div>
+                            
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    <p>To activate this form, sign up at</p>
-                                    <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Footer-->
+
+            <form id="regForm" action="">
+
+                <h1>Register:</h1>
+                
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">Name:
+                  <p><input placeholder="First name..." oninput="this.className = ''"></p>
+                  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+                </div>
+                
+                <div class="tab">Contact Info:
+                  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+                  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+                </div>
+                
+                <div class="tab">Birthday:
+                  <p><input placeholder="dd" oninput="this.className = ''"></p>
+                  <p><input placeholder="mm" oninput="this.className = ''"></p>
+                  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                </div>
+                
+                <div class="tab">Login Info:
+                  <p><input placeholder="Username..." oninput="this.className = ''"></p>
+                  <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                </div>
+                
+                <div style="overflow:auto;">
+                  <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                  </div>
+                </div>
+                
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                </div>
+                
+                </form>
+
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">
