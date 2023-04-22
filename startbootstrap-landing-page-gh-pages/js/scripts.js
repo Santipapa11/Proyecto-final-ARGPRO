@@ -31,6 +31,12 @@ function nextPrev(n) {
   currentTab = currentTab + n;
  if (currentTab == 4){
     $("#idname").html($("#inputname").val())
+    $("#idlname").html($("#inputlname").val())
+    $("#idemail").html($("#inputemail").val())
+    $("#idtelefono").html($("#inputelefono").val())
+    $("#idddmmyyyy").html($("#inputddmmyyyy").val())
+    $("#idus").html($("#inputus").val())
+    $("#idpass").html($("#inputpass").val())
   }
 
   if (currentTab >= x.length) {

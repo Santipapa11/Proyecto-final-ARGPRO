@@ -189,24 +189,31 @@
                 </div>
                 
                 <div class="tab">Contact Info:
-                  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-                  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+                  <p><input placeholder="E-mail..." id = "inputemail" oninput="this.className = ''"></p>
+                  <p><input placeholder="Phone..." id = "inputelefono" oninput="this.className = ''"></p>
                 </div>
                 
-                <div class="tab">Birthday:
-                  <p><input placeholder="dd" oninput="this.className = ''"></p>
-                  <p><input placeholder="mm" oninput="this.className = ''"></p>
-                  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                <div class="tab">Fecha de nacimiento:
+                    <form action="https://example.com">
+                        <label>
+                          Ingresa tu fecha de nacimiento:
+                          <input type="date" name="bday" id = "inputddmmyyyy" />
+                        </label>
                 </div>
                 
                 <div class="tab">Login Info:
-                  <p><input placeholder="Username..." oninput="this.className = ''"></p>
-                  <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                  <p><input placeholder="Username..." id = "inputus" oninput="this.className = ''"></p>
+                  <p><input placeholder="Password..." id = "inputpass" oninput="this.className = ''"></p>
                 </div>
 
                 <div class = "tab" > Resumen
                     <p>Nombre:  <span id="idname"></span></p> 
                     <p>Apellido: <span id="idlname"></span></p>
+                    <p>Email: <span id="idemail"></span></p>
+                    <p>Telefono: <span id="idtelefono"></span></p>
+                    <p>Fecha de nacimiento: <span id = "idddmmyyyy"></span></p>
+                    <p>Usuario: <span id = "idus"></span></p>
+                    <p>Password: <span id = "idpass"></span></p>
                 </div> 
 
                 <div style="overflow:auto;">
