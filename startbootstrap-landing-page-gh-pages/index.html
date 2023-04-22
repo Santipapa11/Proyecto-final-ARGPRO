@@ -15,6 +15,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-light bg-light static-top">
@@ -136,6 +137,7 @@
                 </div>
             </div>
         </section>
+        
 
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
@@ -180,30 +182,29 @@
 
             <form id="regForm" action="">
 
-                <h1>Register:</h1>
+                <h1>Formulario de Inscripción:</h1>
                 
                 <!-- One "tab" for each step in the form: -->
-                <div class="tab">Name:
-                  <p><input placeholder="First name..." id = "inputname" oninput="this.className = ''"></p>
-                  <p><input placeholder="Last name..." id = "inputlname" oninput="this.className = ''"></p>
+                <div class="tab">
+                  <p><input placeholder="Nombre..." id = "inputname" oninput="this.className = ''"></p>
+                  <p><input placeholder="Apellido..." id = "inputlname" oninput="this.className = ''"></p>
                 </div>
                 
-                <div class="tab">Contact Info:
+                <div class="tab">
                   <p><input placeholder="E-mail..." id = "inputemail" oninput="this.className = ''"></p>
-                  <p><input placeholder="Phone..." id = "inputelefono" oninput="this.className = ''"></p>
+                  <p><input placeholder="Telefono de contacto..." id = "inputelefono" oninput="this.className = ''"></p>
                 </div>
                 
                 <div class="tab">Fecha de nacimiento:
                     <form action="https://example.com">
                         <label>
-                          Ingresa tu fecha de nacimiento:
                           <input type="date" name="bday" id = "inputddmmyyyy" />
                         </label>
                 </div>
                 
-                <div class="tab">Login Info:
-                  <p><input placeholder="Username..." id = "inputus" oninput="this.className = ''"></p>
-                  <p><input placeholder="Password..." id = "inputpass" oninput="this.className = ''"></p>
+                <div class="tab">
+                  <p><input placeholder="Usuario..." id = "inputus" oninput="this.className = ''"></p>
+                  <p><input placeholder="Contraseña..." id = "inputpass" oninput="this.className = ''"></p>
                 </div>
 
                 <div class = "tab" > Resumen
@@ -233,7 +234,6 @@
                   <span class="step"></span>
                   <span class="step"></span>
                 </div>
-                
                 </form>
 
         <footer class="footer bg-light">
