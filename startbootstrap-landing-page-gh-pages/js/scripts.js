@@ -90,11 +90,13 @@ $( "#clearButton" ).on( "click", function () {
     $("#Message").val("")
 });
 
-function imprimirElemento(form){
+
+function imprimirElemento(imprimr){
+
   var ventana = window.open('', 'PRINT', 'height=400,width=600');
   ventana.document.write('<html><head><title>' + document.title + '</title>');
   ventana.document.write('</head><body >');
-  ventana.document.write(elemento.innerHTML);
+  ventana.document.write(imprimr.innerHTML);
   ventana.document.write('</body></html>');
   ventana.document.close();
   ventana.focus();
@@ -102,3 +104,44 @@ function imprimirElemento(form){
   ventana.close();
   return true;
 }
+
+$( document ).ready(function() {
+  getAPI();
+});
+
+const getAPI = async () => {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '622beaf4a1msh1e94b767e8b1222p10e557jsnacbb8ab7a40e',
+      'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
+    }
+  };
+  
+  fetch('https://fitness-calculator.p.rapidapi.com/foodids/tablenames', options)
+    .then(response => response.json())
+    .then(response =>  { 
+      var tblName = response.table_names[Math.floor(Math.random() * response.table_names.length)];
+      fetch(`https://fitness-calculator.p.rapidapi.com/foodids/subtablenames?tablename=${tblName}`, options)
+        .then(response2 => response2.json())
+        .then(response2 => {
+          var subtblName = response2.data[Math.floor(Math.random() * response2.data.length)];
+          fetch(`https://fitness-calculator.p.rapidapi.com/foodids?subtablename=${subtblName.id}`, options)
+            .then(response3 => response3.json())
+            .then(response3 => {
+              var foodtblname = response3.data[Math.floor(Math.random() * response3.data.length)];
+              fetch(`https://fitness-calculator.p.rapidapi.com/food?foodid=${foodtblname.id}`, options)
+                .then(response4 => response4.json())
+                .then(response4 => {
+                  var nuttblname = response4.data;
+                })
+                .catch(err => console.error(err));
+            })
+            .catch(err => console.error(err));
+        })
+        .catch(err => console.error(err));
+    })
+    .catch(err => console.error(err));
+    
+} 
+
