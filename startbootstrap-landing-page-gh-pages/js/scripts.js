@@ -133,7 +133,16 @@ const getAPI = async () => {
               fetch(`https://fitness-calculator.p.rapidapi.com/food?foodid=${foodtblname.id}`, options)
                 .then(response4 => response4.json())
                 .then(response4 => {
-                  var nuttblname = response4.data;
+                  var food = response4.data;
+                  $("#vianda").html(food.description);
+
+                  $("#proteina").html(food.foodNutrients.Protein.value + food.foodNutrients.Protein.unitname)
+
+                  $("#grasas").html(food.foodNutrients.Fat["Total lipid (fat)"].value + food.foodNutrients.Fat["Total lipid (fat)"].unitname)
+
+                  $("#carbohidratos").html(food.foodNutrients.Carbonhydrate.value + food.foodNutrients.Carbonhydrate.unitname )
+
+                  $("#energia").html(food.foodNutrients.Energy.value + food.foodNutrients.Energy.unitname )
                 })
                 .catch(err => console.error(err));
             })
