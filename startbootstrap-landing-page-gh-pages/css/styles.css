@@ -10896,16 +10896,13 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
-/* Style the form */
 #regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
+  background-color: #28262678;
+  margin: 100px 0px;
   padding: 40px;
-  width: 70%;
   min-width: 300px;
 }
 
-/* Style the input fields */
 input {
   padding: 10px;
   width: 100%;
@@ -10914,17 +10911,14 @@ input {
   border: 1px solid #aaaaaa;
 }
 
-/* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
 
-/* Hide all steps by default: */
 .tab {
   display: none;
 }
 
-/* Make circles that indicate the steps of the form: */
 .step {
   height: 15px;
   width: 15px;
@@ -10936,12 +10930,10 @@ input.invalid {
   opacity: 0.5;
 }
 
-/* Mark the active step: */
 .step.active {
   opacity: 1;
 }
 
-/* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #04AA6D;
 }
@@ -10992,6 +10984,10 @@ input.invalid {
 
 .slider li.anim5 {
   animation: cycle5 15s linear infinite;
+}
+
+i {
+  color: rgb(253, 101, 13);
 }
 
 @keyframes cycle {

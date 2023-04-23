@@ -12,9 +12,11 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("print").style.display = "inline";
+    document.getElementById("nextBtn").innerHTML = "Enviar";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("print").style.display = "none";
+    document.getElementById("nextBtn").innerHTML = "Siguiente";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
@@ -81,7 +83,7 @@ function fixStepIndicator(n) {
 }
 
 $( "#submitButton" ).on( "click", function () { 
-     console.log ("Datos guardados correctamente.") 
+  guardado() 
 });
    
 $( "#clearButton" ).on( "click", function () { 
@@ -153,4 +155,9 @@ const getAPI = async () => {
     .catch(err => console.error(err));
     
 } 
+
+function guardado(){
+  var myModal = new bootstrap.Modal(document.getElementById('alerta'))
+  myModal.show()
+}
 
